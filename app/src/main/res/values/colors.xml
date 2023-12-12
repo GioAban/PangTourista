@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#FFFFFFFF</color>
+    <color name="colorBlue">#1A6FBF</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGrey">#3C3F41</color>
+    <color name="colorDarkGrey">#323333</color>
+    <color name="activityBackground">#FFFFFF</color>
+    <color name="background">#FFFFFF</color>
+    <color name="themeColor">#5B3BFE</color>
+    <color name="textColor">#3C3F41</color>
+    <color name="lightBlue">#5E9AD2</color>
+    <color name="iconBg">#AFB1B3</color>
+    <color name="lightText">#BABEC1</color>
+    <color name="pagesBackgroundColor">#F0F2F5</color>
+    <color name="cottonDustWhite">#E9E9E9</color>
+    <color name="green">#61E900</color>
+    <color name="dashboard_color">#787CF5</color>
+
+</resources>

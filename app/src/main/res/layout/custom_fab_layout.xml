@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:elevation="40dp"
+    android:layout_gravity="bottom|end"
+    android:layout_margin="28dp">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|end"
+    android:id="@+id/fab_mic"
+    android:layout_margin="4dp"
+    android:backgroundTint="@color/themeColor"
+    android:src="@drawable/micro_phone"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|end"
+    android:id="@+id/fab_info"
+    android:layout_margin="8dp"
+    app:fabSize="mini"
+    android:backgroundTint="@color/themeColor"
+    android:src="@drawable/ic_info"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/fab"
+    android:text="Action"
+    android:backgroundTint="@color/themeColor"
+    android:layout_marginBottom="12dp"
+    app:icon="@drawable/ic_info"/>
+    </LinearLayout>

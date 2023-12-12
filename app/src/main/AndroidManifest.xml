@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PangTourista"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".activities.IntroActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Intro"/>
+        <activity
+            android:name=".activities.MunicipalFilteredNotification"
+            android:exported="false"
+            android:theme="@style/Base.Theme.PangTourista.Actionbar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.FindDestinationActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.PangTourista.Actionbar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.SearchMunicipality"
+            android:exported="false" />
+        <activity
+            android:name=".activities.LandmarkCommentSection"
+            android:exported="false"
+            android:theme="@style/Base.Theme.PangTourista.Actionbar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.PrivacyPolicyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.PrivacyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ListFiestaFestivalEvent"
+            android:exported="false"
+            android:theme="@style/Base.Theme.PangTourista.Actionbar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.SeeMunicipalityActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.PangTourista.Actionbar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.VistualAssistantActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.FeedbackAndConcernActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.NearbyPlacesMenu"
+            android:exported="false"
+            android:theme="@style/Base.Theme.PangTourista.Actionbar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.GetNearbyPlaces"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".activities.MapService"
+            android:exported="false"
+            android:theme="@style/Base.Theme.PangTourista.Actionbar" />
+        <activity
+            android:name=".activities.ViewMap"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MunicipalityDetailActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.PangTourista.Actionbar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.NewsEventActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.PangTourista.Actionbar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.NewsEventsDetailActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.PangTourista.Actionbar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.AboutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.NotificationActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.SearchActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.PangTourista.Actionbar" />
+        <activity
+            android:name=".activities.CategoryActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.PangTourista.Actionbar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.ListFavorite"
+            android:exported="false"
+            android:label="Saved Landmark"
+            android:theme="@style/Base.Theme.PangTourista.Actionbar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".EmailLoginRegister.EmailVerificationOTP"
+            android:exported="false" />
+        <activity
+            android:name=".EmailLoginRegister.NewPassword"
+            android:exported="false" />
+        <activity
+            android:name=".EmailLoginRegister.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.LandmarkDetailActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.PangTourista.Actionbar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".EmailLoginRegister.EmailRegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EmailLoginRegister.EmailLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SplashScreen"
+            android:exported="true"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.MainActivity" />
+    </application>
+
+</manifest>

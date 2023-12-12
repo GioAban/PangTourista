@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ProfileActivity"
+    android:background="#F5F5F9">
+
+    <include
+        android:id="@+id/user_profile"
+        layout="@layout/app_bar_layout">
+    </include>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="160dp"
+        android:layout_height="164dp"
+        android:layout_marginTop="4dp"
+        android:padding="5dp"
+        android:src="@drawable/ic_profile"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/selectImageFromGallery"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="98dp"
+        android:layout_marginBottom="6dp"
+        android:elevation="16dp"
+        android:src="@drawable/ic_profile_camera"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_image"
+        app:layout_constraintEnd_toEndOf="@+id/profile_image"
+        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintStart_toStartOf="@+id/profile_image"
+        app:layout_constraintTop_toTopOf="@+id/profile_image"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_corners"
+        android:elevation="12dp"
+        android:orientation="vertical"
+        android:padding="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image"
+        app:layout_constraintVertical_bias="0.126"
+        tools:layout_editor_absoluteX="16dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedFullname"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_image"
+            android:enabled="false"
+            android:hint="Email"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            tools:layout_editor_absoluteX="18dp"
+            tools:layout_editor_absoluteY="320dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/user_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+
+            android:layout_marginEnd="18dp"
+            android:enabled="false"
+            android:hint="Username"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            app:layout_constraintEnd_toEndOf="@+id/outlinedFullname"
+            app:layout_constraintStart_toStartOf="@+id/outlinedFullname"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedFullname">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout3"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="18dp"
+            android:hint="Phone Number"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            app:layout_constraintEnd_toEndOf="@+id/outlinedFullname"
+            app:layout_constraintStart_toStartOf="@+id/outlinedFullname"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedFullname">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedSex"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="18dp"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+            <AutoCompleteTextView
+                android:id="@+id/sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" /> <!-- Apply the custom style here -->
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btnUpdateProfile"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_below="@+id/outlinedSex"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/button_background"
+            android:text="Update"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/outlinedSex"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/outlinedSex"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedSex" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:text="UPDATE PROFILE"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_profile" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

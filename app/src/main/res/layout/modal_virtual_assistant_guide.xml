@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="What are the things to do in Pangasinan?"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="What are the beaches in Pangasinan?"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="What are the churches or pilgrimage?"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="What are the farm &amp; natures in pangasinan?"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="What are the adventures in pangasinan?"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="What are the cultural and heritages in pangasinan?"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="What are the products in pangasinan?"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="What's the News or events in pangasinan"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="What is the history of (mention the name of municipality/city)."
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="What is the main product of the (mention the name of municipality/city)."
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="what are the attractions in (mention the name of municipality/city)."
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="what can be seen in (mention the name of municipality/city)."
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="What is the festival of (mention the name of municipality/city)."
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Locate me to (mention the name of landmark)."
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Provide the information of (mention the name of landmark)."
+            android:layout_marginBottom="18dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Open my favorite or saved landmark"
+            android:layout_marginBottom="18dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:text="Ask Nearby Places"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Ex. Locate me to the nearest restaurant"
+            android:layout_marginBottom="18dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="• Locate the nearest ATM"
+            android:layout_marginBottom="18dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="• Locate the nearest Gas Station"
+            android:layout_marginBottom="18dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="• Locate the nearest Bank"
+            android:layout_marginBottom="18dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="• Locate me to the nearest Police station"
+            android:layout_marginBottom="18dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="• Locate me to the nearest Parking area"
+            android:layout_marginBottom="18dp"/>
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="• Locate the nearby Repair Shop"
+            android:layout_marginBottom="18dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="• Locate the Bus Station"
+            android:layout_marginBottom="18dp"/>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

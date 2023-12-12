@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.VistualAssistantActivity">
+
+    <include
+        android:id="@+id/virtual_assistant"
+        layout="@layout/app_bar_layout">
+    </include>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/virtual_assistant_lottie_animation"
+        android:layout_width="358dp"
+        android:layout_height="220dp"
+        android:layout_marginBottom="128dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/virtual_assistance_animation" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rounded_corners"
+        android:onClick="displayModal"
+        android:scaleType="fitXY"
+        android:elevation="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/virtual_assistant_lottie_animation"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintStart_toStartOf="@+id/virtual_assistant_lottie_animation"
+        app:layout_constraintTop_toBottomOf="@+id/virtual_assistant_lottie_animation"
+        app:srcCompat="@drawable/baseline_info_24" />
+
+    <TextView
+        android:layout_width="273dp"
+        android:layout_height="131dp"
+        android:background="@drawable/rounded_corners"
+        android:elevation="20dp"
+        android:padding="20dp"
+        android:textAlignment="center"
+        android:text="Tap the bot or virtual assistant and begin to speak. You can ask about the history of the municipality/city, what can be seen there, nearby places, products, festival, latest news, and locate destinations."
+        android:textColor="@color/black"
+        android:textSize="12dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/virtual_assistant_lottie_animation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed1"
+        app:layout_constraintVertical_bias="0.129" />
+
+    <TextView
+        android:id="@+id/ed1"
+        android:layout_width="262dp"
+        android:layout_height="59dp"
+        android:textColor="@color/themeColor"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/virtual_assistant_lottie_animation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.463" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chatView"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/editMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:hint="Enter your message"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnSend"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_media_play" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/chatView"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        tools:listitem="@layout/adapter_message_one"
+        app:stackFromEnd="true"
+        tools:itemCount="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/constraintLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="1dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

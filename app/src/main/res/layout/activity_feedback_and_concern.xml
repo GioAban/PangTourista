@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="10dp"
+        tools:context=".activities.UserFeedbackConcernActivity">
+
+        <include
+            android:id="@+id/feedback_concern_bar_layout"
+            layout="@layout/app_bar_layout">
+        </include>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="10dp"
+            android:paddingBottom="18dp"
+            android:background="@drawable/rounded_corners">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_ptcao"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="38sp"
+            android:textAlignment="center"
+            android:textColor="#0071BC"
+            android:text="PTCAO"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16sp"
+            android:textAlignment="center"
+            android:textColor="#A3A3A3"
+            android:text="PROVINCIAL TOURISM &amp; CULTURAL AFFAIRS OFFICE" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="6dp"
+            android:textAlignment="center"
+            android:textColor="#A3A3A3"
+            android:text="1st Floor Malong Bldg., Capitol Complex, Lingayen, Pangasinan 2401
+Tel. No. (075) 542-6853 | Mobile No. (0999) 883 9740" />
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="6dp"
+            android:text="Feedback and Concerns" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:paddingLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="Name" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Loading..."
+                android:textStyle="bold"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:paddingStart="20dp"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="Email" />
+
+            <TextView
+                android:id="@+id/user_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Loading..."
+                android:textStyle="bold"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+            <ImageView
+                android:id="@+id/image_preview"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:visibility="gone"
+                android:layout_margin="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder" />
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/feedback_image"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:src="@drawable/image_attach_icon"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedPetDescription"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Write your concern's here...">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/user_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/btnSubmitConcern"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="12dp"
+                android:paddingTop="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/send_btn"
+                android:layout_gravity="end"
+                android:onClick="submitUserConcern"/>
+        </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

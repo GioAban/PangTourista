@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/theme"
+    android:id="@+id/drawer_layout"
+    tools:context=".activities.MainActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- Other content goes here -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+                <!-- Add the Toolbar here -->
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/logged_user_photo"
+                    android:layout_width="28dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_profile"
+                    android:layout_gravity="end"
+                    android:layout_margin="12dp"/>
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <!-- Add the MaterialSearchBar here -->
+                <com.mancj.materialsearchbar.MaterialSearchBar
+                    android:id="@+id/searchBar"
+                    style="@style/MaterialSearchBarLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="14dp"
+                    app:mt_hint="Type here..."
+                    app:mt_placeholder="Search municipality/city"
+                    app:mt_maxSuggestionsCount="10"
+                    app:layout_anchor="@id/toolbar"
+                    app:layout_anchorGravity="end|center_vertical" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:orientation="horizontal"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="82dp"
+                            android:layout_height="60dp"
+                            android:onClick="goToFindDestination"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp"
+                                android:padding="7dp"
+                                android:elevation="26dp"
+                                android:scaleType="fitXY"
+                                android:background="@drawable/nav_circal_white_bg"
+                                android:src="@drawable/search_icon"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:textSize="10dp"
+                                android:text="Find destination"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="82dp"
+                            android:layout_height="60dp"
+                            android:onClick="goToNewsAndEventsActivity"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp"
+                                android:padding="3dp"
+                                android:elevation="26dp"
+                                android:background="@drawable/nav_circal_white_bg"
+                                android:src="@drawable/ic_news_event"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:textSize="10dp"
+                                android:text="News &amp; Events"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="82dp"
+                            android:layout_height="60dp"
+                            android:onClick="goToFiestaFestivalEvent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp"
+                                android:padding="6dp"
+                                android:elevation="26dp"
+                                android:background="@drawable/white_radius"
+                                android:src="@drawable/ic_calendar"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:textSize="10dp"
+                                android:text="Fiesta's/Festival"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="82dp"
+                            android:layout_height="60dp"
+                            android:onClick="goToNearbyPlacesMenu"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp"
+                                android:padding="4dp"
+                                android:elevation="26dp"
+                                android:background="@drawable/white_radius"
+                                android:src="@drawable/ic_nearby_places"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:textSize="10dp"
+                                android:text="Nearby Places"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="THINGS TO DO"
+                    android:textStyle="bold"
+                    android:textColor="@color/cottonDustWhite"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="18sp"/>
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/btnAdventure"
+                            android:layout_width="140dp"
+                            android:layout_height="48dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="6dp"
+                            android:padding="19dp"
+                            app:cardBackgroundColor="#FFFFFF"
+                            android:layout_margin="6dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:padding="14dp">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/ic_adventurer" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:gravity="center_vertical"
+                                    android:text="Adventure" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/btnCulturalHeritage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="6dp"
+                            android:padding="19dp"
+                            app:cardBackgroundColor="#FFFFFF"
+                            android:layout_margin="6dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:padding="14dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_cultural_heriateg"
+                                    android:layout_gravity="center_vertical"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cultural &amp; Heritage"
+                                    android:layout_marginLeft="8dp"
+                                    android:gravity="center_vertical"/>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/btnProduct"
+                            android:layout_width="150dp"
+                            android:layout_height="48dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="6dp"
+                            android:padding="19dp"
+                            app:cardBackgroundColor="#FFFFFF"
+                            android:layout_margin="6dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="14dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_products"
+                                    android:layout_gravity="center_vertical"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Product"
+                                    android:layout_marginLeft="8dp"
+                                    android:gravity="center_vertical"/>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/btnChurch"
+                            android:layout_width="150dp"
+                            android:layout_height="48dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="6dp"
+                            android:padding="19dp"
+                            app:cardBackgroundColor="#FFFFFF"
+                            android:layout_margin="6dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="14dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_church"
+                                    android:layout_gravity="center_vertical"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pilgrimage"
+                                    android:layout_marginLeft="8dp"
+                                    android:gravity="center_vertical"/>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/btnFamily"
+                            android:layout_width="170dp"
+                            android:layout_height="48dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="6dp"
+                            android:padding="19dp"
+                            app:cardBackgroundColor="#FFFFFF"
+                            android:layout_margin="6dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/family"
+                                    android:layout_gravity="center_vertical"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Family"
+                                    android:layout_marginLeft="8dp"
+                                    android:gravity="center_vertical"/>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/btnFarmAndNature"
+                            android:layout_width="170dp"
+                            android:layout_height="48dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="6dp"
+                            android:padding="19dp"
+                            app:cardBackgroundColor="#FFFFFF"
+                            android:layout_margin="6dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="14dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_sunflower"
+                                    android:layout_gravity="center_vertical"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Farm and Nature"
+                                    android:layout_marginLeft="8dp"
+                                    android:gravity="center_vertical"/>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/btnIslandAndBeaches"
+                            android:layout_width="170dp"
+                            android:layout_height="48dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="6dp"
+                            android:padding="19dp"
+                            app:cardBackgroundColor="#FFFFFF"
+                            android:layout_margin="6dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="14dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_beach_and_island"
+                                    android:layout_gravity="center_vertical"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Island and Beach"
+                                    android:layout_marginLeft="8dp"
+                                    android:gravity="center_vertical"/>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/btnRidgeAndReef"
+                            android:layout_width="170dp"
+                            android:layout_height="48dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="6dp"
+                            android:padding="19dp"
+                            app:cardBackgroundColor="#FFFFFF"
+                            android:layout_margin="6dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="14dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ridge_and_reef"
+                                    android:layout_gravity="center_vertical"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ridge and Reef"
+                                    android:layout_marginLeft="8dp"
+                                    android:gravity="center_vertical"/>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/btnOther"
+                            android:layout_width="170dp"
+                            android:layout_height="48dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="6dp"
+                            android:padding="19dp"
+                            app:cardBackgroundColor="#FFFFFF"
+                            android:layout_margin="6dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="14dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/other"
+                                    android:layout_gravity="center_vertical"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Other"
+                                    android:layout_marginLeft="8dp"
+                                    android:gravity="center_vertical"/>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/landmarkList"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+
+                    android:layout_height="500dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="500dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="MUNICIPALITIES &amp; CITIES"
+                            android:layout_marginTop="20dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/cottonDustWhite"
+                            android:layout_marginBottom="8dp"
+                            android:textSize="18sp"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/municipality_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="500dp" />
+
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_person"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="220dp"
+            android:layout_height="54dp"
+            android:visibility="gone"
+            android:clickable="true"
+            android:focusable="true"
+            android:tint="@color/white"
+            android:background="@drawable/ic_help"
+            android:backgroundTint="@color/themeColor"
+            android:layout_gravity="bottom|end"
+            app:srcCompat="@drawable/ic_virtual_assistance" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_alarm"
+            android:layout_width="60dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="150dp"
+            android:visibility="gone"
+            android:layout_height="54dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:tint="@color/white"
+            android:backgroundTint="@color/themeColor"
+            android:layout_gravity="bottom|end"
+            app:srcCompat="@drawable/ic_help" />
+
+        <TextView
+            android:id="@+id/add_alarm_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VA guide"
+            android:visibility="gone"
+            android:textColor="@color/themeColor"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="166dp"/>
+
+        <TextView
+            android:id="@+id/add_person_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vitual Assitant mode"
+            android:visibility="gone"
+            android:textColor="@color/themeColor"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="240dp"/>
+
+
+
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/add_fab"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="38dp"
+            android:layout_marginBottom="120dp"
+            android:layout_height="wrap_content"
+            android:tint="#9198FF"
+            app:iconTint="@color/white"
+            app:icon="@drawable/ic_virtual_assistance"
+            android:backgroundTint="@color/themeColor"
+            android:layout_gravity="bottom|end" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu"
+        android:id="@+id/nav_view"
+        android:layout_gravity="start"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

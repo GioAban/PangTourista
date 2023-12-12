@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OPERATIONAL HOURS :"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <TextView
+            android:id="@+id/operational_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="loading..."
+            android:layout_marginBottom="12dp"
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WEBSITE LINK :"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <TextView
+            android:id="@+id/website_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="loading..."
+            android:layout_marginBottom="12dp"
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BEST TIME TO VISIT :"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <TextView
+            android:id="@+id/best_time_to_visit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="loading..."
+            android:layout_marginBottom="12dp"
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TAGS/KEY WORDS :"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <TextView
+            android:id="@+id/tags_keyword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="loading..."
+            android:layout_marginBottom="12dp"
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="THINGS TO DO :"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <TextView
+            android:id="@+id/things_to_do"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="loading..."
+            android:layout_marginBottom="12dp"
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HOW TO GET THERE :"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <TextView
+            android:id="@+id/how_to_get_there"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="loading..."
+            android:layout_marginBottom="12dp"
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="120dp" />
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

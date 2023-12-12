@@ -1,0 +1,15 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background Color (This will be your border color) -->
+    <item android:drawable="@color/colorDarkGrey" />
+
+    <!-- Border -->
+    <item
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp"
+        android:bottom="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#CDDAE4" /> <!-- Border Color -->
+        </shape>
+    </item>
+</layer-list>

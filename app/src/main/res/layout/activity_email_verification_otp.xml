@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmailLoginRegister.EmailVerificationOTP">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="358dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/enter_otp" />
+
+
+    <TextView
+        android:id="@+id/textEmailOrPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:visibility="invisible"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Account Verification"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lottie" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="315dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="4dp"
+        android:text="Select your preferred method for receiving the verification code. Enter the code, then press the button to complete the verification."
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <com.chaos.view.PinView
+        android:id="@+id/pinview"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:cursorVisible="true"
+        android:gravity="center"
+        android:inputType="number"
+        android:itemBackground="@color/white"
+        android:textColor="@color/colorGrey"
+        app:hideLineWhenFilled="false"
+        app:itemCount="4"
+        app:itemHeight="50dp"
+        app:itemRadius="10dp"
+        app:itemWidth="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.395"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textEmailOrPhoneNumber"
+        app:lineColor="@color/themeColor"></com.chaos.view.PinView>
+
+    <Button
+        android:id="@+id/submitOtp"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_background"
+        android:elevation="50dp"
+        android:padding="10dp"
+        android:text="Verify"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/pinview"
+        app:layout_constraintStart_toStartOf="@+id/pinview"
+        app:layout_constraintTop_toBottomOf="@+id/pinview" />
+
+    <Button
+        android:id="@+id/resendCodeToEmail"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="18dp"
+        android:padding="14dp"
+        android:text="Send me a code by email"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/submitOtp" />
+
+    <Button
+        android:id="@+id/resendCodeToPhoneNumber"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:padding="14dp"
+        android:text="Send me a code by phone number"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/resendCodeToEmail" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

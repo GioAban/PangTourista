@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F8"
+    android:orientation="vertical"
+    tools:context=".activities.CategoryActivity">
+
+    <include
+        android:id="@+id/category_of_destination"
+        layout="@layout/app_bar_layout">
+    </include>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/landmarkList"
+        android:layout_marginBottom="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

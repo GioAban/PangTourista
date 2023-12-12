@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".activities.MunicipalityDetailActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/detail_municipality"
+            layout="@layout/app_bar_layout">
+        </include>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_municipality">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+
+                app:cardElevation="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/municipality_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/rounded_corners"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/municipality_logo"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/placeholder"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:elevation="8dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/rounded_corners"
+                android:orientation="vertical">
+            <TextView
+                android:id="@+id/municipalityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading details..."
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/municipalityAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:text="Loading details..."
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/municipalityDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Loading details..."
+                android:textSize="16sp" />
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/main_product_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:elevation="8dp"
+            android:layout_margin="2dp"
+            android:background="@drawable/rounded_corners"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:id="@+id/main_product_label"
+                android:text="MAIN PRODUCT"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mainProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading..."
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/festival_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:elevation="8dp"
+            android:layout_margin="2dp"
+            android:background="@drawable/rounded_corners"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FIESTAS/FESTIVAL"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fiestaFestivalEvent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="439dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/rounded_corners"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ai.nextbillion.maps.core.MapView
+                        android:id="@+id/municipalityMapView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/landmarkDescription"
+                        app:nbmap_uiAttribution="false" />
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/btnStartNav"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_background"
+                    android:elevation="50dp"
+                    android:padding="10dp"
+                    android:text="Start navigation"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/generatingRouteIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:padding="6dp" />
+
+                <TextView
+                    android:id="@+id/generatingRouteText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Generating route's please wait..." />
+
+                <Button
+                    android:id="@+id/btnSeeMunicipality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/button_background"
+                    android:elevation="50dp"
+                    android:onClick="gotoSeeMunicipality"
+                    android:padding="10dp"
+                    android:layout_marginBottom="28dp"
+                    android:text=""
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

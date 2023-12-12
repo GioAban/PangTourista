@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AboutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ptcao_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:elevation="20dp"
+            android:padding="18dp"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="@color/lightText"
+                android:text="ABOUT US"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/id_name"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/lightText"
+                android:text="loading..."
+                android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="DESCRIPTION:"/>
+
+        <TextView
+            android:id="@+id/id_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="loading"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="BACKGROUND:"/>
+
+        <TextView
+            android:id="@+id/id_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="loading..."
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="VISION:"/>
+
+        <TextView
+            android:id="@+id/id_vision"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="loading..."
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="MISSION:"/>
+
+        <TextView
+            android:id="@+id/id_mission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="loading..."
+            android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp"
+            android:gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_marginTop="28dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_pangasinan"/>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:onClick="go_to_faceBook"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="12dp"
+                    android:src="@drawable/ic_facebook"/>
+
+                <ImageView
+                    android:onClick="go_to_instagram"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="12dp"
+                    android:src="@drawable/ic_instagram"/>
+
+                <ImageView
+                    android:onClick="go_to_youTube"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="12dp"
+                    android:src="@drawable/ic_youtube"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="THINGS TO DO"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="LATEST NEWS"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="FEEDBACK &amp; CONCENS"/>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:gravity="center"
+                android:text="© 2021 Pangasinan Provincial Tourism and Cultural Affairs Office (PTCAO). All Rights Reserved."/>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
